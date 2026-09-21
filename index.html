@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Township - Authorized 3S Dealership</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">H</div>
+                <div class="logo-text">Honda<span>Township</span></div>
+            </a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="salesservice.html">Sales & Service</a></li>
+                    <li><a href="parts.html">Parts</a></li>
+                    <li><a href="used-cars.html">Used Cars</a></li>
+                    <li><a href="insurance.html">Insurance</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="tracker.html">Tracker</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1773065083527-dc06cc1f04fe?w=1920&q=90" alt="Honda Civic">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b?w=1920&q=90" alt="Honda City">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1748581700327-1b482901a08a?w=1920&q=90" alt="Honda CR-V">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                Authorized 3S Dealership
+            </div>
+            <h1>Experience the <span>Honda</span> Difference</h1>
+            <p>Discover premium Honda vehicles with world-class sales, service, and spare parts all under one roof.</p>
+            <div class="hero-buttons">
+                <a href="salesservice.html" class="btn btn-primary">
+                    <i class="fas fa-car"></i>
+                    Explore Models
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-phone"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        <div class="hero-nav">
+            <button class="hero-nav-dot active" data-slide="0"></button>
+            <button class="hero-nav-dot" data-slide="1"></button>
+            <button class="hero-nav-dot" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15K+</h3>
+                    <p>Cars Sold</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section class="section" id="models">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-car"></i>
+                    Our Lineup
+                </div>
+                <h2>Explore Honda Models</h2>
+                <p>From compact sedans to powerful SUVs, find the perfect Honda for your lifestyle.</p>
+            </div>
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=600&q=85" alt="Honda City">
+                        <span class="model-card-badge">Popular</span>
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda City</h3>
+                        <p>Elegant sedan with premium features and fuel efficiency.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 58.5L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b?w=600&q=85" alt="Honda Civic">
+                        <span class="model-card-badge">New</span>
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda Civic</h3>
+                        <p>Sporty performance meets sophisticated design.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 72L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1748581700327-1b482901a08a?w=600&q=85" alt="Honda CR-V">
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda CR-V</h3>
+                        <p>Versatile SUV for adventure seekers and families.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 128L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1572471275438-6eb23850b175?w=600&q=85" alt="Honda HR-V">
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda HR-V</h3>
+                        <p>Compact crossover with big capabilities.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 85L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=85" alt="Honda Accord">
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda Accord</h3>
+                        <p>Luxury sedan with advanced technology.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 145L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1681697390363-1142eb46b76d?w=600&q=85" alt="Honda BR-V">
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda BR-V</h3>
+                        <p>7-seater SUV for the whole family.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 52L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1707070182914-fb69f596c98e?w=600&q=85" alt="Honda Vezel">
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda Vezel</h3>
+                        <p>Modern crossover with hybrid efficiency.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 75L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-card-image">
+                        <img src="https://images.unsplash.com/photo-1548144417-06f20c6793e4?w=600&q=85" alt="Honda Step WGN">
+                    </div>
+                    <div class="model-card-content">
+                        <h3>Honda Step WGN</h3>
+                        <p>Spacious minivan for ultimate comfort.</p>
+                        <div class="model-card-price">
+                            <span class="price">PKR 95L</span>
+                            <a href="salesservice.html" class="cta">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-tools"></i>
+                    Our Services
+                </div>
+                <h2>Complete Honda Care</h2>
+                <p>From sales to after-sales support, we've got you covered.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>New Car Sales</h3>
+                    <p>Explore the complete range of Honda vehicles with expert guidance and best prices.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Authorized Service</h3>
+                    <p> Certified technicians using genuine Honda parts for optimal performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Genuine Parts</h3>
+                    <p> Original Honda parts with warranty to keep your vehicle running perfectly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Insurance Solutions</h3>
+                    <p> Comprehensive insurance packages tailored for your Honda vehicle.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Registration Help</h3>
+                    <p> Hassle-free registration and documentation services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>GPS Tracking</h3>
+                    <p> Advanced vehicle tracking systems for security and peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="features-content">
+                    <div class="section-badge">
+                        <i class="fas fa-star"></i>
+                        Why Choose Us
+                    </div>
+                    <h2>Your Trusted Honda Partner</h2>
+                    <p>We are committed to providing exceptional service and genuine Honda quality. With over 25 years of experience, we understand what matters most to our customers.</p>
+                    <ul class="features-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>Certified Honda technicians with ongoing training</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>100% genuine Honda parts with warranty</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>Transparent pricing with no hidden charges</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>Free vehicle health checkup with every service</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <span>Pickup and delivery service available</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="features-image">
+                    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=85" alt="Honda Service Center">
+                    <div class="features-image-overlay">
+                        <h4>Authorized Service Center</h4>
+                        <p> equipped with latest diagnostic tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-quote-left"></i>
+                    Testimonials
+                </div>
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it. Hear from our satisfied customers.</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent service from start to finish. The team helped me choose the perfect Honda City and the after-sales support has been outstanding. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-info">
+                            <h4>Ahmed Khan</h4>
+                            <p>Honda City Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience Honda?</h2>
+                <p>Visit us today and discover why thousands of customers trust Honda Township for their automotive needs.</p>
+                <a href="#contact" class="btn btn-white">
+                    <i class="fas fa-calendar-check"></i>
+                    Book a Test Drive
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    Get in Touch
+                </div>
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help.</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+92 300 1234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option>General Inquiry</option>
+                                <option>New Car Purchase</option>
+                                <option>Service Booking</option>
+                                <option>Parts Inquiry</option>
+                                <option>Insurance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Visit Us</h4>
+                        <p>Main GT Road, Abbottabad, KPK, Pakistan</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Call Us</h4>
+                        <p>+92 992 123456</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Working Hours</h4>
+                        <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">H</div>
+                        <div class="logo-text">Honda<span>Township</span></div>
+                    </a>
+                    <p>Your trusted 3S Authorized Honda Dealership in Abbottabad. Sales, Service, and Spare Parts - all under one roof.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="salesservice.html">Sales & Service</a></li>
+                        <li><a href="parts.html">Parts</a></li>
+                        <li><a href="used-cars.html">Used Cars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="insurance.html">Insurance</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="tracker.html">Vehicle Tracker</a></li>
+                        <li><a href="#">Book Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Abbottabad, Pakistan</li>
+                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> +92 992 123456</li>
+                        <li><i class="fas fa-envelope" style="color: var(--honda-red); margin-right: 8px;"></i> info@hondatownship.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Honda Township. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
