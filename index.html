@@ -11,7 +11,7 @@
     <!-- Header -->
     <header id="header">
         <div class="header-inner">
-            <a href="index.html" class="logo">
+            <a href="index.html#about" class="logo">
                 <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
             </a>
             <nav id="nav">
@@ -54,10 +54,10 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-badge">
+            <a href="#about" class="hero-badge">
                 <i class="fas fa-award"></i>
                 Authorized 3S Dealership
-            </div>
+            </a>
             <h1>Experience the <span>Honda</span> Difference</h1>
             <p>Discover premium Honda vehicles with world-class sales, service, and spare parts all under one roof.</p>
             <div class="hero-buttons">
@@ -327,6 +327,47 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section class="section section-gray" id="about">
+        <div class="container">
+            <div class="features-grid">
+                <div class="features-content">
+                    <div class="section-badge">
+                        <i class="fas fa-building"></i>
+                        About Us
+                    </div>
+                    <h2>Abbottabad's Authorized 3S Dealership</h2>
+                    <p>Honda Township is an authorized 3S dealership serving Abbottabad and the region with genuine Honda Sales, Service, and Spare Parts — all under one roof. Our factory-trained team delivers the same quality standard you expect from Honda, with transparent pricing and a customer-first approach.</p>
+                    <ul class="features-list">
+                        <li>
+                            <i class="fas fa-car"></i>
+                            <span><strong>Sales</strong> — Full range of Honda vehicles with expert consultation</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-tools"></i>
+                            <span><strong>Service</strong> — Certified technicians with genuine Honda diagnostics</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-cogs"></i>
+                            <span><strong>Spare Parts</strong> — 100% authentic Honda parts with warranty</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Visit Our Showroom
+                    </a>
+                </div>
+                <div class="features-image">
+                    <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=800&q=85" alt="Honda Showroom Abbottabad">
+                    <div class="features-image-overlay">
+                        <h4>Sales • Service • Spare Parts</h4>
+                        <p>One roof. Complete Honda care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="section section-dark">
         <div class="container">
@@ -384,6 +425,24 @@
                 </div>
                 <h2>Contact Us</h2>
                 <p>Have questions? We're here to help.</p>
+            </div>
+            <div class="phone-strip">
+                <div class="phone-box">
+                    <div class="phone-box-icon"><i class="fas fa-headset"></i></div>
+                    <div class="phone-box-info">
+                        <span>Sales</span>
+                        <a href="tel:+923001234567">+92 300 1234567</a>
+                    </div>
+                    <a href="tel:+923001234567" class="phone-box-call"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+                <div class="phone-box">
+                    <div class="phone-box-icon"><i class="fas fa-phone-volume"></i></div>
+                    <div class="phone-box-info">
+                        <span>Contact</span>
+                        <a href="tel:+92992123456">+92 992 123456</a>
+                    </div>
+                    <a href="tel:+92992123456" class="phone-box-call"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
             </div>
             <div class="contact-grid">
                 <form class="contact-form" id="contactForm">
@@ -448,7 +507,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html#about" class="logo">
                         <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
                     </a>
                     <p>Your trusted 3S Authorized Honda Dealership in Abbottabad. Sales, Service, and Spare Parts - all under one roof.</p>
@@ -495,6 +554,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons -->
+    <a href="tel:+923001234567" class="fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/923001234567" class="fab-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
     <script src="js/main.js"></script>
 </body>
