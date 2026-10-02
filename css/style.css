@@ -138,18 +138,19 @@ header.scrolled .quick-bar {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 8px;
+    gap: 4px;
 }
 
 nav ul li a {
     color: rgba(255,255,255,0.7);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    padding: 10px 20px;
+    padding: 10px 12px;
     border-radius: 8px;
     transition: var(--transition);
     position: relative;
+    white-space: nowrap;
 }
 
 nav ul li a:hover,
@@ -1022,6 +1023,47 @@ nav ul li a.active::after {
     100% { transform: scale(1.6); opacity: 0; }
 }
 
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 44px 20px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
 /* Footer */
 footer {
     background: var(--honda-black);
@@ -1541,6 +1583,13 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 10px 8px;
+    }
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 24px;
@@ -1616,6 +1665,11 @@ footer {
     
     .fab-call { left: 16px; }
     .fab-whatsapp { right: 16px; }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
     
     nav {
         position: fixed;
