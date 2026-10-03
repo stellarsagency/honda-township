@@ -61,18 +61,24 @@ img {
 
 .top-bar .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 
 .top-bar a {
     color: rgba(255,255,255,0.7);
-    margin-left: 16px;
     transition: var(--transition);
 }
 
 .top-bar a:hover {
     color: var(--honda-red);
+}
+
+.top-bar a i {
+    color: var(--honda-red);
+    font-size: 0.75rem;
 }
 
 /* Header */
