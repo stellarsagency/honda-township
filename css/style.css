@@ -265,6 +265,12 @@ nav ul > li:hover .dropdown {
     font-size: 1.1em;
 }
 
+.dealer-badge img.badge-h {
+    height: 1.5em;
+    width: auto;
+    display: block;
+}
+
 .hero-slides {
     display: flex;
     transition: transform 0.6s ease;
