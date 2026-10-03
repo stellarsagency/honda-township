@@ -62,6 +62,42 @@ header.scrolled {
     box-shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
 
+/* Top utility bar with phone numbers */
+.topbar {
+    background: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 8px 40px;
+}
+
+.topbar a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.topbar a:hover {
+    color: #fff;
+}
+
+.topbar a i {
+    color: var(--honda-red);
+    font-size: 0.75rem;
+}
+
 .header-inner {
     display: flex;
     justify-content: space-between;
@@ -1129,7 +1165,7 @@ footer {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding-top: 100px;
+    padding-top: 140px;
 }
 
 .page-banner::before {
@@ -1575,6 +1611,20 @@ footer {
 @media (max-width: 768px) {
     .header-inner {
         padding: 6px 20px;
+    }
+    
+    .topbar .container {
+        gap: 14px;
+        padding: 6px 16px;
+    }
+    
+    .topbar a {
+        font-size: 0.72rem;
+        gap: 5px;
+    }
+    
+    .topbar a i {
+        font-size: 0.68rem;
     }
     
     .logo-img {
