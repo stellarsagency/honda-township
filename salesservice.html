@@ -8,171 +8,231 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="topbar">
-            <div class="container">
-                <a href="tel:+923001234567"><i class="fas fa-phone-alt"></i> For Sale: +92 300 1234567</a>
-                <a href="tel:+92992123456"><i class="fas fa-headset"></i> For Contact: +92 992 123456</a>
+    <div class="top-bar">
+        <div class="container">
+            <span>Honda Township - Authorised 3S Dealership</span>
+            <div>
+                <a href="contact.html"><i class="fas fa-phone"></i> +92 300 1234567</a>
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i> Abbottabad, Pakistan</a>
             </div>
         </div>
+    </div>
+    <header id="header">
         <div class="header-inner">
-            <a href="about.html" class="logo">
-                <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Honda Abbott" class="logo-img" style="height: 56px;">
             </a>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="salesservice.html" class="active">Sales & Service</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="salesservice.html" class="active">Sales &amp; Service</a></li>
                     <li><a href="parts.html">Parts</a></li>
                     <li><a href="used-cars.html">Used Cars</a></li>
-                    <li><a href="insurance.html">Insurance</a></li>
-                    <li><a href="registration.html">Registration</a></li>
-                    <li><a href="tracker.html">Tracker</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="#">Support <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="insurance.html">Insurance</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="tracker.html">Vehicle Tracker</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <div class="quick-bar">
-            <div class="container">
-                <a href="index.html#models" class="quick-btn"><i class="fas fa-car"></i> Sale</a>
-                <a href="salesservice.html" class="quick-btn"><i class="fas fa-tools"></i> Services</a>
-                <a href="parts.html" class="quick-btn"><i class="fas fa-cogs"></i> Parts</a>
-            </div>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
         </div>
     </header>
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Page Banner -->
-    <section class="page-banner" style="background: url('https://images.unsplash.com/photo-1773065083527-dc06cc1f04fe?w=1920&q=85') center/cover;">
-        <div class="page-banner-content">
-            <h1>Sales & Service</h1>
-            <p>Professional Honda Sales and Authorized Service Center</p>
+    <section class="page-banner" style="background: linear-gradient(135deg, #0a0a0a 0%, #333 100%);">
+        <div class="container">
+            <h1>Sales &amp; Service</h1>
+            <p>Professional Honda Sales and Authorised Service Center</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Sales &amp; Service
+            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-tools"></i>
-                    What We Offer
-                </div>
                 <h2>Complete Automotive Solutions</h2>
                 <p>From expert sales consultation to certified maintenance, we deliver excellence.</p>
             </div>
-            <div class="service-details-grid">
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1609676671207-d021525a635d?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>New Car Sales</h3>
-                        <p>Explore the complete range of Honda vehicles with expert guidance and competitive pricing.</p>
-                    </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-car"></i>
+                    <h4>New Car Sales</h4>
+                    <p>Explore the complete range of Honda vehicles with expert guidance and competitive pricing.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Test Drive Experience</h3>
-                        <p>Book a test drive and feel the Honda difference on the road.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-road"></i>
+                    <h4>Test Drive Experience</h4>
+                    <p>Book a test drive and feel the Honda difference on the road.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Expert Consultation</h3>
-                        <p>Our trained professionals help you find the perfect Honda for your needs.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Expert Consultation</h4>
+                    <p>Our trained professionals help you find the perfect Honda for your needs.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Authorized Service</h3>
-                        <p>Certified technicians using genuine Honda parts for optimal performance.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-tools"></i>
+                    <h4>Authorised Service</h4>
+                    <p>Certified technicians using genuine Honda parts for optimal performance.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Diagnostics</h3>
-                        <p>Advanced diagnostic equipment to identify and resolve issues quickly.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-laptop"></i>
+                    <h4>Diagnostics</h4>
+                    <p>Advanced diagnostic equipment to identify and resolve issues quickly.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Warranty Support</h3>
-                        <p>Comprehensive warranty coverage for your peace of mind.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Warranty Support</h4>
+                    <p>Comprehensive warranty coverage for your peace of mind.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section section-light">
         <div class="container">
-            <div class="cta-content">
-                <h2>Book Your Service Today</h2>
-                <p>Schedule your appointment online or visit us directly. Your Honda deserves the best care.</p>
-                <a href="#contact" class="btn btn-white">
-                    <i class="fas fa-calendar-check"></i>
-                    Book Appointment
-                </a>
+            <div class="section-header">
+                <h2>Free Service Program</h2>
+                <p>Complimentary maintenance for new Honda owners</p>
+            </div>
+            <div class="grid-2 align-center" style="gap: 40px;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=85" alt="Honda Service" style="width: 100%; border-radius: 12px;">
+                </div>
+                <div>
+                    <h3 style="font-family: 'Roboto Condensed', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #333;">What's Included</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check" style="color: var(--honda-red);"></i> Engine oil and filter change
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check" style="color: var(--honda-red);"></i> Multi-point vehicle inspection
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check" style="color: var(--honda-red);"></i> Tire pressure and rotation check
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check" style="color: var(--honda-red);"></i> Brake and suspension inspection
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check" style="color: var(--honda-red);"></i> Fluid levels top-up
+                        </li>
+                    </ul>
+                    <p style="margin-top: 20px; color: #666;">*Free service applies to first scheduled maintenance. Terms and conditions apply.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Delivery Status Checker</h2>
+                <p>Track your new Honda's delivery progress</p>
+            </div>
+            <div style="max-width: 600px; margin: 0 auto; padding: 40px; background: #f9f9f9; border-radius: 12px;">
+                <form id="deliveryForm">
+                    <div class="form-group" style="margin-bottom: 16px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 500;">Chassis Number / Order ID</label>
+                        <input type="text" required placeholder="e.g. HN-2026-00123" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 500;">Registered Phone Number</label>
+                        <input type="tel" required placeholder="+92 300 1234567" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+                    </div>
+                    <button type="submit" class="btn btn-red" style="width: 100%;">Check Status <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" style="background: linear-gradient(135deg, var(--honda-red), var(--honda-red-dark)); padding: 60px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2 style="font-family: 'Roboto Condensed', sans-serif; font-size: 2rem; margin-bottom: 16px;">Book Your Service Today</h2>
+            <p style="margin-bottom: 24px; opacity: 0.9;">Schedule your appointment online or visit us directly. Your Honda deserves the best care.</p>
+            <a href="contact.html" class="btn btn-outline-white">Book Appointment</a>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="about.html" class="logo">
-                        <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="Honda Abbott" class="logo-img" style="height: 56px; filter: brightness(0) invert(1);">
                     </a>
-                    <p>Your trusted 3S Authorized Honda Dealership in Abbottabad.</p>
+                    <p>Your trusted Authorised 3S Honda Dealership in Abbottabad. Sales, Service, and Spare Parts - all under one roof.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Model Line</h4>
                     <ul>
-                    <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="salesservice.html">Sales & Service</a></li>
-                        <li><a href="parts.html">Parts</a></li>
-                        <li><a href="used-cars.html">Used Cars</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="civic.html">Honda Civic</a></li>
+                        <li><a href="hrv.html">Honda HR-V</a></li>
+                        <li><a href="city.html">Honda City</a></li>
+                        <li><a href="civic.html">Civic RS</a></li>
+                        <li><a href="hrv.html">HR-V e:HEV</a></li>
+                        <li><a href="ehev.html">e:HEV Technology</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
+                        <li><a href="salesservice.html">Sales &amp; Service</a></li>
+                        <li><a href="parts.html">Genuine Parts</a></li>
+                        <li><a href="tracker.html">Vehicle Tracker</a></li>
                         <li><a href="insurance.html">Insurance</a></li>
                         <li><a href="registration.html">Registration</a></li>
-                        <li><a href="tracker.html">Vehicle Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="used-cars.html">Used Cars</a></li>
+                        <li><a href="https://global.honda/en/" target="_blank">Global Honda</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Abbottabad, Pakistan</li>
-                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> For Sale: +92 300 1234567</li>
-                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> For Contact: +92 992 123456</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Main GT Road, Abbottabad</li>
+                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> +92 300 1234567</li>
+                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> +92 992 123456</li>
+                        <li><i class="fas fa-envelope" style="color: var(--honda-red); margin-right: 8px;"></i> info@hondatownship.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Honda Township. All rights reserved.</p>
+                <p>Copyright 2026 © Honda Township - Authorised 3S Dealership</p>
                 <div class="footer-bottom-links">
+                    <a href="#">Terms &amp; Conditions</a>
                     <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <a href="tel:+923001234567" class="fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
-    <a href="https://wa.me/923001234567" class="fab-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('deliveryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Delivery status inquiry received. Our team will contact you with your vehicle status shortly.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

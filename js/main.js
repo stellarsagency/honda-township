@@ -1,24 +1,12 @@
 // Honda Township - Main JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Header scroll effect
-    const header = document.getElementById('header');
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
     // Mobile menu
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileToggle = document.getElementById('mobileToggle');
     const nav = document.getElementById('nav');
     const navOverlay = document.getElementById('navOverlay');
 
-    if (mobileMenuBtn && nav) {
-        mobileMenuBtn.addEventListener('click', function() {
+    if (mobileToggle && nav) {
+        mobileToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
             if (navOverlay) navOverlay.classList.toggle('active');
             document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
@@ -32,55 +20,156 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Close menu on link click
         nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                nav.classList.remove('active');
-                if (navOverlay) navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    var parentLi = this.parentElement;
+                    var hasDropdown = parentLi && parentLi.querySelector(':scope > .dropdown');
+                    // Parent items with a dropdown toggle it instead of closing the menu
+                    if (hasDropdown && this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        var wasOpen = parentLi.classList.contains('open');
+                        // Close siblings
+                        parentLi.parentElement.querySelectorAll(':scope > li.open').forEach(function(li) {
+                            li.classList.remove('open');
+                        });
+                        if (!wasOpen) parentLi.classList.add('open');
+                        return;
+                    }
+                    nav.classList.remove('active');
+                    if (navOverlay) navOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
             });
         });
     }
 
     // Hero slider
-    const heroSlider = document.getElementById('heroSlider');
-    if (heroSlider) {
-        const slides = heroSlider.querySelectorAll('.hero-slide');
-        const dots = document.querySelectorAll('.hero-nav-dot');
-        let currentSlide = 0;
+    const heroSlides = document.getElementById('heroSlides');
+    const heroDots = document.querySelectorAll('.hero-dot');
+    const heroPrev = document.getElementById('heroPrev');
+    const heroNext = document.getElementById('heroNext');
+    let currentSlide = 0;
+    const totalSlides = 3;
 
-        function showSlide(index) {
-            slides.forEach(function(slide) {
-                slide.classList.remove('active');
+    function goToSlide(index) {
+        if (!heroSlides) return;
+        currentSlide = index;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        heroSlides.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        heroDots.forEach(function(dot, i) {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    if (heroNext) {
+        heroNext.addEventListener('click', function() {
+            goToSlide(currentSlide + 1);
+        });
+    }
+
+    if (heroPrev) {
+        heroPrev.addEventListener('click', function() {
+            goToSlide(currentSlide - 1);
+        });
+    }
+
+    heroDots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            goToSlide(parseInt(this.dataset.slide));
+        });
+    });
+
+    if (totalSlides > 1) {
+        setInterval(function() {
+            goToSlide(currentSlide + 1);
+        }, 6000);
+    }
+
+    // Model tabs
+    const modelTabs = document.querySelectorAll('.model-tab');
+    const modelDisplays = document.querySelectorAll('.model-display');
+
+    modelTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const model = this.dataset.model;
+            
+            modelTabs.forEach(function(t) { t.classList.remove('active'); });
+            this.classList.add('active');
+            
+            modelDisplays.forEach(function(d) { d.classList.remove('active'); });
+            const target = document.getElementById(model);
+            if (target) {
+                target.classList.add('active');
+                
+                // Reset variant tabs
+                const variantTabs = target.querySelectorAll('.variant-tab');
+                const variantDisplays = target.querySelectorAll('.variant-display');
+                variantTabs.forEach(function(vt, i) {
+                    vt.classList.toggle('active', i === 0);
+                });
+                variantDisplays.forEach(function(vd, i) {
+                    vd.classList.toggle('active', i === 0);
+                });
+            }
+        });
+    });
+
+    // Variant tabs
+    document.querySelectorAll('.variant-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const variantId = this.dataset.variant;
+            const parent = this.closest('.model-display');
+            if (!parent) return;
+            
+            parent.querySelectorAll('.variant-tab').forEach(function(vt) {
+                vt.classList.remove('active');
             });
-            dots.forEach(function(dot) {
-                dot.classList.remove('active');
+            this.classList.add('active');
+            
+            parent.querySelectorAll('.variant-display').forEach(function(vd) {
+                vd.classList.remove('active');
+            });
+            const target = document.getElementById(variantId);
+            if (target) target.classList.add('active');
+        });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+        q.addEventListener('click', function() {
+            const item = this.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(function(faq) {
+                faq.classList.remove('active');
             });
             
-            if (slides[index]) {
-                slides[index].classList.add('active');
+            if (!isActive) {
+                item.classList.add('active');
             }
-            if (dots[index]) {
-                dots[index].classList.add('active');
-            }
-            currentSlide = index;
-        }
+        });
+    });
 
-        function nextSlide() {
-            const next = (currentSlide + 1) % slides.length;
-            showSlide(next);
-        }
+    // Test drive form
+    const testDriveForm = document.getElementById('testDriveForm');
+    if (testDriveForm) {
+        testDriveForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for booking a test drive! We will contact you shortly to confirm your appointment.');
+            this.reset();
+        });
+    }
 
-        // Auto advance
-        if (slides.length > 1) {
-            setInterval(nextSlide, 5000);
-        }
-
-        // Dot navigation
-        dots.forEach(function(dot, index) {
-            dot.addEventListener('click', function() {
-                showSlide(index);
-            });
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', function() {
+            backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
+        });
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -89,141 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
-                const headerHeight = header ? header.offsetHeight : 0;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
-    });
-
-    // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = document.getElementById('name') ? document.getElementById('name').value : '';
-            
-            // Simple validation
-            if (!name) {
-                alert('Please enter your name');
-                return;
-            }
-            
-            // Show success message
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
-
-    // Animate elements on scroll
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.model-card, .service-card, .car-card, .insurance-card, .process-card, .tracker-feature, .service-detail-card, .info-card');
-        
-        elements.forEach(function(element) {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementTop < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-
-    // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll('.model-card, .service-card, .car-card, .insurance-card, .process-card, .tracker-feature, .service-detail-card, .info-card');
-    animatedElements.forEach(function(element) {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'all 0.6s ease';
-    });
-
-    // Run animation on scroll
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Run once on load
-
-    // Counter animation for stats
-    const counters = document.querySelectorAll('.stat-item h3');
-    let countersAnimated = false;
-
-    function animateCounters() {
-        if (countersAnimated) return;
-        
-        const statsSection = document.querySelector('.stats-bar');
-        if (!statsSection) return;
-
-        const sectionTop = statsSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (sectionTop < windowHeight - 100) {
-            countersAnimated = true;
-            
-            counters.forEach(function(counter) {
-                const target = counter.textContent;
-                const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
-                const suffix = target.replace(/[0-9]/g, '');
-                let current = 0;
-                const increment = Math.ceil(numericValue / 50);
-                const duration = 2000;
-                const stepTime = duration / (numericValue / increment);
-
-                const timer = setInterval(function() {
-                    current += increment;
-                    if (current >= numericValue) {
-                        counter.textContent = target;
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = current + suffix;
-                    }
-                }, stepTime);
-            });
-        }
-    }
-
-    window.addEventListener('scroll', animateCounters);
-    animateCounters();
-
-    // Back to top button
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.style.cssText = 'position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--honda-red); color: white; border: none; border-radius: 50%; cursor: pointer; display: none; z-index: 999; font-size: 18px; box-shadow: 0 4px 12px rgba(228, 5, 33, 0.3); transition: all 0.3s ease;';
-    document.body.appendChild(backToTopBtn);
-
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 500) {
-            backToTopBtn.style.display = 'flex';
-            backToTopBtn.style.alignItems = 'center';
-            backToTopBtn.style.justifyContent = 'center';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-
-    backToTopBtn.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px)';
-        this.style.boxShadow = '0 6px 20px rgba(228, 5, 33, 0.4)';
-    });
-
-    backToTopBtn.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '0 4px 12px rgba(228, 5, 33, 0.3)';
     });
 });

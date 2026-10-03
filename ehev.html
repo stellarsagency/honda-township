@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honda Township - Authorised 3S Dealership</title>
+    <title>e:HEV – Original Honda Hybrid System | Honda Township</title>
+    <meta name="description" content="Discover Honda's e:HEV hybrid-electric technology - the intelligent two-motor system that switches between EV, Hybrid, and Engine drive modes for maximum efficiency.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ehev.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <span>Honda Township - Authorised 3S Dealership</span>
@@ -19,8 +19,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Header -->
     <header id="header">
         <div class="header-inner">
             <a href="index.html" class="logo">
@@ -43,311 +41,12 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
         </div>
     </header>
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Hero Banner Slider -->
-    <section class="hero-banner">
-        <div class="dealer-badge"><i class="fas fa-award"></i> Authorised 3S Dealership</div>
-        <div class="hero-slides" id="heroSlides">
-            <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=1600&q=85" alt="Honda Civic">
-                <div class="hero-overlay"></div>
-                <div class="hero-slide-content">
-                    <span class="badge">New Arrival</span>
-                    <h1>Honda Civic</h1>
-                    <p>The embodiment of sporty sophistication</p>
-                    <div class="price">From PKR 8,499,000 <span>*On the road</span></div>
-                    <div class="hero-btns">
-                        <a href="civic.html" class="btn btn-red">Discover</a>
-                        <a href="#testdrive" class="btn btn-outline-white">Book Test Drive</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1707070182914-fb69f596c98e?w=1600&q=85" alt="Honda HR-V">
-                <div class="hero-overlay"></div>
-                <div class="hero-slide-content">
-                    <span class="badge">Hybrid Technology</span>
-                    <h1>Honda HR-V e:HEV</h1>
-                    <p>The new era of hybrid electric driving</p>
-                    <div class="price">From PKR 9,299,000 <span>*On the road</span></div>
-                    <div class="hero-btns">
-                        <a href="hrv.html" class="btn btn-red">Discover</a>
-                        <a href="#testdrive" class="btn btn-outline-white">Book Test Drive</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=1600&q=85" alt="Honda City">
-                <div class="hero-overlay"></div>
-                <div class="hero-slide-content">
-                    <span class="badge">Special Package</span>
-                    <h1>Honda City</h1>
-                    <p>Drive your dream with the all-new City</p>
-                    <div class="price">From PKR 4,737,000 <span>*On the road</span></div>
-                    <div class="hero-btns">
-                        <a href="city.html" class="btn btn-red">Discover</a>
-                        <a href="#testdrive" class="btn btn-outline-white">Book Test Drive</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="hero-arrow prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
-        <button class="hero-arrow next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
-        <div class="hero-nav" id="heroNav">
-            <button class="hero-dot active" data-slide="0"></button>
-            <button class="hero-dot" data-slide="1"></button>
-            <button class="hero-dot" data-slide="2"></button>
-        </div>
-    </section>
-
-    <!-- Model Lineup -->
-    <section class="section" id="models">
-        <div class="container">
-            <div class="section-header">
-                <h2>Find Your Honda Car</h2>
-                <p>Explore our complete range of Honda vehicles available at Honda Township</p>
-            </div>
-
-            <!-- Model Tabs -->
-            <div class="model-tabs">
-                <button class="model-tab active" data-model="civic">Civic</button>
-                <button class="model-tab" data-model="hrv">HR-V</button>
-                <button class="model-tab" data-model="city">City</button>
-            </div>
-
-            <!-- Civic Variants -->
-            <div class="model-display active" id="civic">
-                <div class="variant-tabs">
-                    <button class="variant-tab active" data-variant="civic-standard">Civic Standard</button>
-                    <button class="variant-tab" data-variant="civic-oriel">Civic Oriel</button>
-                    <button class="variant-tab" data-variant="civic-rs">Civic RS</button>
-                </div>
-                <div class="variant-display active" id="civic-standard">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b?w=800&q=85" alt="Honda Civic Standard">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">Standard</span>
-                            <h3>Honda Civic Standard</h3>
-                            <div class="model-price">PKR 8,499,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">Experience the perfect blend of performance and efficiency with the Civic Standard. Featuring Honda Sensing technology, turbocharged engine, and premium interior comfort.</p>
-                            <div class="model-card-actions">
-                                <a href="civic.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="variant-display" id="civic-oriel">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1773065083527-dc06cc1f04fe?w=800&q=85" alt="Honda Civic Oriel">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">Oriel</span>
-                            <h3>Honda Civic Oriel</h3>
-                            <div class="model-price">PKR 8,834,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">Elevate your drive with the Civic Oriel. Premium sunroof, leather-appointed seats, and advanced infotainment system for the discerning driver.</p>
-                            <div class="model-card-actions">
-                                <a href="civic.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="variant-display" id="civic-rs">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=800&q=85" alt="Honda Civic RS">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">RS Turbo</span>
-                            <h3>Honda Civic RS Turbo</h3>
-                            <div class="model-price">PKR 10,100,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">The pinnacle of Civic performance. Turbocharged 1.5L VTEC engine, sport-tuned suspension, and exclusive RS exterior styling elements.</p>
-                            <div class="model-card-actions">
-                                <a href="civic.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HR-V Variants -->
-            <div class="model-display" id="hrv">
-                <div class="variant-tabs">
-                    <button class="variant-tab active" data-variant="hrv-vtis">HR-V VTI-S</button>
-                    <button class="variant-tab" data-variant="hrv-ehev">HR-V e:HEV</button>
-                </div>
-                <div class="variant-display active" id="hrv-vtis">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1572471275438-6eb23850b175?w=800&q=85" alt="Honda HR-V VTI-S">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">VTI-S</span>
-                            <h3>Honda HR-V VTI-S</h3>
-                            <div class="model-price">PKR 7,299,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">Versatile and stylish compact SUV. Honda Sensing safety suite, Magic Seats for ultimate cargo flexibility, and responsive driving dynamics.</p>
-                            <div class="model-card-actions">
-                                <a href="hrv.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="variant-display" id="hrv-ehev">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1707070182914-fb69f596c98e?w=800&q=85" alt="Honda HR-V e:HEV">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">e:HEV Hybrid</span>
-                            <h3>Honda HR-V e:HEV</h3>
-                            <div class="model-price">PKR 9,299,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">Experience the future of driving with Honda's advanced hybrid technology. Two-motor system delivers exceptional fuel economy without compromising performance.</p>
-                            <div class="model-card-actions">
-                                <a href="hrv.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- City Variants -->
-            <div class="model-display" id="city">
-                <div class="variant-tabs">
-                    <button class="variant-tab active" data-variant="city-12">City 1.2LS</button>
-                    <button class="variant-tab" data-variant="city-aspire">City Aspire 1.5LAS</button>
-                    <button class="variant-tab" data-variant="city-aspire-s">City Aspire S 1.5LAS</button>
-                </div>
-                <div class="variant-display active" id="city-12">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=800&q=85" alt="Honda City 1.2LS">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">1.2LS</span>
-                            <h3>Honda City 1.2LS</h3>
-                            <div class="model-price">PKR 4,737,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">The perfect entry to the Honda family. Fuel-efficient 1.2L engine, comfortable interior, and legendary Honda reliability at an accessible price.</p>
-                            <div class="model-card-actions">
-                                <a href="city.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="variant-display" id="city-aspire">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=800&q=85" alt="Honda City Aspire">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">Aspire 1.5LAS</span>
-                            <h3>Honda City Aspire 1.5LAS</h3>
-                            <div class="model-price">PKR 6,069,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">Step up to the Aspire with its more powerful 1.5L engine, enhanced features, and premium styling that turns heads on every road.</p>
-                            <div class="model-card-actions">
-                                <a href="city.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="variant-display" id="city-aspire-s">
-                    <div class="model-card-main">
-                        <div class="model-card-image">
-                            <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=800&q=85" alt="Honda City Aspire S">
-                        </div>
-                        <div class="model-card-info">
-                            <span class="model-badge">Aspire S 1.5LAS</span>
-                            <h3>Honda City Aspire S 1.5LAS CVT</h3>
-                            <div class="model-price">PKR 6,149,000</div>
-                            <div class="model-price-note">*For detailed price kindly use price calculator</div>
-                            <p class="model-desc">The top-of-the-line City variant with CVT transmission, Honda Sensing, sunroof, and the most advanced features in its class.</p>
-                            <div class="model-card-actions">
-                                <a href="city.html" class="btn btn-red">Explore More</a>
-                                <a href="#testdrive" class="btn btn-outline-red">Submit Inquiry</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promo Banners -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Promotions</h2>
-                <p>Take advantage of our current offers at Honda Township</p>
-            </div>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <img src="https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b?w=600&q=80" alt="Civic Offer">
-                    <div class="promo-card-overlay">
-                        <h4>Civic Summer Sales</h4>
-                        <a href="#testdrive">Submit Inquiry <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <img src="https://images.unsplash.com/photo-1707070182914-fb69f596c98e?w=600&q=80" alt="HR-V Offer">
-                    <div class="promo-card-overlay">
-                        <h4>HR-V e:HEV Summer Sales</h4>
-                        <a href="#testdrive">Submit Inquiry <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <img src="https://images.unsplash.com/photo-1609676671207-d021525a635d?w=600&q=80" alt="City Offer">
-                    <div class="promo-card-overlay">
-                        <h4>City Aspire Special Package</h4>
-                        <a href="#testdrive">Submit Inquiry <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80" alt="After Sales">
-                    <div class="promo-card-overlay">
-                        <h4>2026 After Sales Service Offer</h4>
-                        <a href="salesservice.html">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Financing">
-                    <div class="promo-card-overlay">
-                        <h4>Meezan Bank Financing</h4>
-                        <a href="#testdrive">Submit Inquiry <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="promo-card">
-                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Insurance">
-                    <div class="promo-card-overlay">
-                        <h4>HBL Dream Honda Financing</h4>
-                        <a href="#testdrive">Submit Inquiry <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- e:HEV Tech Section -->
+    <!-- e:HEV Hero -->
     <section class="ehev-hero">
         <div class="ehev-hero-logo">
             Honda <span class="e-badge">e</span> Tech
@@ -360,7 +59,22 @@
         </p>
     </section>
 
-    <div class="ehev-wrap" style="padding-top: 32px;">
+    <!-- Quick index -->
+    <div class="container" style="max-width: 1400px; padding-top: 28px;">
+        <div class="ehev-toc">
+            <a href="#what-is-ehev">What is e:HEV</a>
+            <a href="#ehev-system">What is e:HEV System</a>
+            <a href="#how-works">How e:HEV Works</a>
+            <a href="#videos">e:HEV Learning Videos</a>
+            <a href="#difference">Difference e:HEV vs Others</a>
+            <a href="#voice">Customer Voice</a>
+            <a href="#subscribe">Subscribe</a>
+            <a href="#faqs">FAQs</a>
+        </div>
+    </div>
+
+    <!-- Main layout: sidebar + content -->
+    <div class="ehev-wrap">
         <aside class="ehev-sidebar" id="ehevSidebar">
             <button class="ehev-nav-btn active" data-panel="what-is-ehev">What is e:HEV</button>
             <button class="ehev-nav-btn" data-panel="ehev-system">What is e:HEV System</button>
@@ -743,240 +457,18 @@
         </main>
     </div>
 
-    <!-- CTA to full e:HEV page -->
-    <section class="section" style="background: #f5f6f8; text-align: center; padding-top: 40px; padding-bottom: 60px;">
+    <!-- CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--honda-red), var(--honda-red-dark)); color: white; text-align: center;">
         <div class="container">
-            <h2 style="font-family: 'Roboto Condensed', sans-serif; font-size: 1.8rem; color: #1a1a1a; margin-bottom: 10px;">Experience e:HEV Yourself</h2>
-            <p style="color: #666; margin-bottom: 24px;">Book a test drive of the Honda HR-V e:HEV at Honda Township</p>
+            <h2 style="font-family: 'Roboto Condensed', sans-serif; font-size: 2rem; margin-bottom: 12px;">Experience e:HEV Yourself</h2>
+            <p style="opacity: 0.9; margin-bottom: 24px;">Book a test drive of the Honda HR-V e:HEV at Honda Township</p>
             <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-                <a href="hrv.html" class="btn btn-red">Discover HR-V e:HEV</a>
-                <a href="#testdrive" class="btn btn-outline-red">Book Test Drive</a>
+                <a href="hrv.html" class="btn btn-white" style="background: white; color: var(--honda-red);">Discover HR-V e:HEV</a>
+                <a href="index.html#testdrive" class="btn btn-outline-white" style="border: 2px solid white; color: white;">Book Test Drive</a>
             </div>
         </div>
     </section>
 
-    <!-- Stats -->
-    <section class="section" style="background: linear-gradient(135deg, var(--honda-red) 0%, var(--honda-red-dark) 100%);">
-        <div class="container">
-            <div class="stats-row">
-                <div class="stat-item">
-                    <h3>25+</h3>
-                    <p>Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <h3>15K+</h3>
-                    <p>Cars Sold</p>
-                </div>
-                <div class="stat-item">
-                    <h3>50K+</h3>
-                    <p>Happy Customers</p>
-                </div>
-                <div class="stat-item">
-                    <h3>3S</h3>
-                    <p>Sales, Service & Spare Parts</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Test Drive Booking -->
-    <section class="testdrive-section" id="testdrive">
-        <div class="container">
-            <div class="testdrive-form">
-                <h3>Book Test Drive</h3>
-                <form id="testDriveForm">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>Select Car</label>
-                            <select required>
-                                <option value="">Select Car</option>
-                                <option>Honda Civic</option>
-                                <option>Honda HR-V</option>
-                                <option>Honda City</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Select City</label>
-                            <select required>
-                                <option value="">Select City</option>
-                                <option>Abbottabad</option>
-                                <option>Mansehra</option>
-                                <option>Islamabad</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Select Dealer</label>
-                            <select required>
-                                <option value="">Select Dealer</option>
-                                <option>Honda Township - Main GT Road, Abbottabad</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Preferred Time (09:00AM to 04:00PM)</label>
-                            <select required>
-                                <option value="">Select Time</option>
-                                <option>09:00 AM</option>
-                                <option>10:00 AM</option>
-                                <option>11:00 AM</option>
-                                <option>12:00 PM</option>
-                                <option>01:00 PM</option>
-                                <option>02:00 PM</option>
-                                <option>03:00 PM</option>
-                                <option>04:00 PM</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="Your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="03XX-XXXXXXX" required>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-red btn-block">
-                                <i class="fas fa-car"></i> Book Test Drive
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dealer Network -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Dealer Network</h2>
-                <p>Honda Township - Your trusted 3S authorised dealership</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>3S Dealers</h4>
-                    <p>Sales, Service & Spare Parts all under one roof for complete convenience.</p>
-                    <a href="contact.html" class="card-link">Find Dealer <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h4>Delivery Status</h4>
-                    <p>Check the delivery status of your newly booked Honda vehicle.</p>
-                    <a href="salesservice.html" class="card-link">Check Status <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-wrench"></i>
-                    <h4>Free Service</h4>
-                    <p>Schedule your free service appointment at Honda Township service center.</p>
-                    <a href="salesservice.html" class="card-link">Book Now <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-file-alt"></i>
-                    <h4>Online Booking</h4>
-                    <p>Book your favorite Honda model online with easy financing options.</p>
-                    <a href="#testdrive" class="card-link">Book Online <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News & Events -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Updates</h2>
-                <p>Sales, service, and certified vehicles at Honda Township</p>
-            </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80" alt="Honda Service">
-                    <div class="news-card-content">
-                        <div class="news-date">After-Sales</div>
-                        <h4>Authorised Sales &amp; Service Centre</h4>
-                        <p>Certified technicians, genuine parts, and complete after-sales care at our Abbottabad facility.</p>
-                        <a href="salesservice.html" class="read-more">Explore Services <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <img src="https://images.unsplash.com/photo-1707070182914-fb69f596c98e?w=600&q=80" alt="HR-V eHEV">
-                    <div class="news-card-content">
-                        <div class="news-date">Hybrid Technology</div>
-                        <h4>Honda HR-V e:HEV - Pakistan's Hybrid SUV</h4>
-                        <p>Honda Atlas brings the HR-V e:HEV to Pakistan, marking a new era of hybrid innovation.</p>
-                        <a href="hrv.html" class="read-more">Discover HR-V <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <img src="https://images.unsplash.com/photo-1761315087712-4b1bd53ce39b?w=600&q=80" alt="Honda Civic">
-                    <div class="news-card-content">
-                        <div class="news-date">New Bookings</div>
-                        <h4>Book Your New Honda Civic Today</h4>
-                        <p>Reserve the all-new Honda Civic with exclusive booking benefits and flexible financing options.</p>
-                        <a href="civic.html" class="read-more">View Civic <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common questions about Honda vehicles</p>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        What is a Hybrid Electric Vehicle (HEV)?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        A hybrid-electric vehicle (HEV) is equipped with electric motors in addition to an engine and achieves excellent fuel economy by efficiently using those two power sources.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How does an e:HEV work?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        The e:HEV hybrid-electric system was created by combining all of the engine and electrification technologies Honda has amassed. It intelligently switches between three modes: EV drive, Hybrid drive, and Engine drive for optimal efficiency.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What are the available financing options?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Honda Township offers financing through Meezan Bank, HBL Dream Honda, and other leading banks with competitive markup rates and flexible repayment plans.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How do I book a test drive at Honda Township?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        You can book a test drive through the form above, call us directly at +92 300 1234567, or visit our showroom on Main GT Road, Abbottabad.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Does Honda Township provide after-sales service?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Yes, as a 3S authorised dealership, Honda Township provides complete after-sales service including scheduled maintenance, repairs, and genuine Honda spare parts.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
         <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1043,7 +535,6 @@
     </footer>
 
     <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
-
     <script src="js/main.js"></script>
     <script src="js/ehev.js"></script>
 </body>

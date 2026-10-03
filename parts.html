@@ -8,171 +8,216 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="topbar">
-            <div class="container">
-                <a href="tel:+923001234567"><i class="fas fa-phone-alt"></i> For Sale: +92 300 1234567</a>
-                <a href="tel:+92992123456"><i class="fas fa-headset"></i> For Contact: +92 992 123456</a>
+    <div class="top-bar">
+        <div class="container">
+            <span>Honda Township - Authorised 3S Dealership</span>
+            <div>
+                <a href="contact.html"><i class="fas fa-phone"></i> +92 300 1234567</a>
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i> Abbottabad, Pakistan</a>
             </div>
         </div>
+    </div>
+    <header id="header">
         <div class="header-inner">
-            <a href="about.html" class="logo">
-                <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Honda Abbott" class="logo-img" style="height: 56px;">
             </a>
-            <nav id="nav">
+                        <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                        <li><a href="salesservice.html">Sales & Service</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="salesservice.html">Sales &amp; Service</a></li>
                     <li><a href="parts.html" class="active">Parts</a></li>
                     <li><a href="used-cars.html">Used Cars</a></li>
-                    <li><a href="insurance.html">Insurance</a></li>
-                    <li><a href="registration.html">Registration</a></li>
-                    <li><a href="tracker.html">Tracker</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="#">Support <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="insurance.html">Insurance</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="tracker.html">Vehicle Tracker</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <div class="quick-bar">
-            <div class="container">
-                <a href="index.html#models" class="quick-btn"><i class="fas fa-car"></i> Sale</a>
-                <a href="salesservice.html" class="quick-btn"><i class="fas fa-tools"></i> Services</a>
-                <a href="parts.html" class="quick-btn"><i class="fas fa-cogs"></i> Parts</a>
-            </div>
+            <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
         </div>
     </header>
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Page Banner -->
-    <section class="page-banner" style="background: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=85') center/cover;">
-        <div class="page-banner-content">
-            <h1>Genuine Honda Parts</h1>
-            <p>Original parts with warranty for optimal performance</p>
+    <section class="page-banner" style="background: linear-gradient(135deg, #0a0a0a 0%, #333 100%);">
+        <div class="container">
+            <h1>Genuine Parts</h1>
+            <p>100% authentic Honda spare parts and accessories</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Genuine Parts
+            </div>
         </div>
     </section>
 
-    <!-- Parts Section -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">
+                <h2>Parts Categories</h2>
+                <p>Find genuine Honda parts for your vehicle</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-engine"></i>
+                    <h4>Engine Parts</h4>
+                    <p>Pistons, gaskets, timing belts, and complete engine components.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-compact-disc"></i>
+                    <h4>Brake System</h4>
+                    <p>Brake pads, discs, calipers, and brake fluid for every model.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-filter"></i>
+                    <h4>Filters</h4>
+                    <p>Oil, air, cabin, and fuel filters for optimal performance.</p>
+                </div>
+                <div class="feature-card">
                     <i class="fas fa-cogs"></i>
-                    Parts Catalog
+                    <h4>Suspension</h4>
+                    <p>Shock absorbers, struts, springs, and steering components.</p>
                 </div>
-                <h2>Authentic Honda Parts</h2>
-                <p>Keep your Honda running like new with genuine parts designed specifically for your vehicle.</p>
-            </div>
-            <div class="service-details-grid">
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Engine Parts</h3>
-                        <p>Pistons, cylinders, gaskets, and complete engine components for peak performance.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Lighting</h4>
+                    <p>Headlights, taillights, LED bulbs, and fog lamps.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Brake Systems</h3>
-                        <p>Pads, discs, calipers, and complete brake assemblies for safety.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-car"></i>
+                    <h4>Body Parts</h4>
+                    <p>Bumpers, mirrors, fenders, and exterior trim pieces.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Filters & Fluids</h3>
-                        <p>Air, oil, fuel filters and all essential fluids for maintenance.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-tint"></i>
+                    <h4>Fluids & Chemicals</h4>
+                    <p>Honda genuine oil, coolant, brake fluid, and additives.</p>
                 </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Suspension</h3>
-                        <p>Shock absorbers, springs, and steering components for smooth ride.</p>
-                    </div>
-                </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Body Parts</h3>
-                        <p>Bumpers, mirrors, lights, and exterior components.</p>
-                    </div>
-                </div>
-                <div class="service-detail-card" style="background: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=85') center/cover;">
-                    <div class="service-detail-card-content">
-                        <h3>Accessories</h3>
-                        <p>Original Honda accessories to customize and enhance your vehicle.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-tools"></i>
+                    <h4>Accessories</h4>
+                    <p>OEM and authorised accessories to personalize your Honda.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section section-light">
         <div class="container">
-            <div class="cta-content">
-                <h2>Need a Specific Part?</h2>
-                <p>Contact us with your vehicle details and we'll find the right part for you.</p>
-                <a href="index.html#contact" class="btn btn-white">
-                    <i class="fas fa-phone"></i>
-                    Contact Parts Dept
-                </a>
+            <div class="section-header">
+                <h2>Why Choose Genuine Honda Parts?</h2>
+                <p>Only genuine parts maintain your Honda's performance and safety</p>
+            </div>
+            <div class="grid-2 align-center" style="gap: 40px;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=85" alt="Genuine Honda Parts" style="width: 100%; border-radius: 12px;">
+                </div>
+                <div>
+                    <div style="margin-bottom: 24px;">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--honda-red); font-size: 24px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 4px;">Perfect Fit</h4>
+                                <p style="color: #666; margin: 0;">Genuine parts are engineered to Honda's exact specifications for a perfect fit every time.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--honda-red); font-size: 24px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 4px;">Warranty Backed</h4>
+                                <p style="color: #666; margin: 0;">All genuine parts come with Honda's manufacturer warranty for peace of mind.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--honda-red); font-size: 24px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 4px;">Safety Guaranteed</h4>
+                                <p style="color: #666; margin: 0;">Aftermarket parts can compromise safety. Genuine parts maintain crash protection.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--honda-red); font-size: 24px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 4px;">Resale Value</h4>
+                                <p style="color: #666; margin: 0;">Using genuine parts helps maintain your vehicle's resale value and service history.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-red">Order Parts</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+        <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="about.html" class="logo">
-                        <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="Honda Abbott" class="logo-img" style="height: 56px; filter: brightness(0) invert(1);">
                     </a>
-                    <p>Your trusted 3S Authorized Honda Dealership in Abbottabad.</p>
+                    <p>Your trusted Authorised 3S Honda Dealership in Abbottabad. Sales, Service, and Spare Parts - all under one roof.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Model Line</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="salesservice.html">Sales & Service</a></li>
-                        <li><a href="parts.html">Parts</a></li>
-                        <li><a href="used-cars.html">Used Cars</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="civic.html">Honda Civic</a></li>
+                        <li><a href="hrv.html">Honda HR-V</a></li>
+                        <li><a href="city.html">Honda City</a></li>
+                        <li><a href="civic.html">Civic RS</a></li>
+                        <li><a href="hrv.html">HR-V e:HEV</a></li>
+                        <li><a href="ehev.html">e:HEV Technology</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
+                        <li><a href="salesservice.html">Sales &amp; Service</a></li>
+                        <li><a href="parts.html">Genuine Parts</a></li>
+                        <li><a href="tracker.html">Vehicle Tracker</a></li>
                         <li><a href="insurance.html">Insurance</a></li>
                         <li><a href="registration.html">Registration</a></li>
-                        <li><a href="tracker.html">Vehicle Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="used-cars.html">Used Cars</a></li>
+                        <li><a href="https://global.honda/en/" target="_blank">Global Honda</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Abbottabad, Pakistan</li>
-                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> For Sale: +92 300 1234567</li>
-                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> For Contact: +92 992 123456</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Main GT Road, Abbottabad</li>
+                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> +92 300 1234567</li>
+                        <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> +92 992 123456</li>
+                        <li><i class="fas fa-envelope" style="color: var(--honda-red); margin-right: 8px;"></i> info@hondatownship.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Honda Township. All rights reserved.</p>
+                <p>Copyright 2026 © Honda Township - Authorised 3S Dealership</p>
                 <div class="footer-bottom-links">
+                    <a href="#">Terms &amp; Conditions</a>
                     <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <a href="tel:+923001234567" class="fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
-    <a href="https://wa.me/923001234567" class="fab-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
     <script src="js/main.js"></script>
 </body>
 </html>
