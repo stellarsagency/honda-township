@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Tracker - Honda Township</title>
+    <title>Contact Us - Honda Township</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -29,8 +29,8 @@
                     <li><a href="used-cars.html">Used Cars</a></li>
                     <li><a href="insurance.html">Insurance</a></li>
                     <li><a href="registration.html">Registration</a></li>
-                    <li><a href="tracker.html" class="active">Tracker</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tracker.html">Tracker</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -48,111 +48,96 @@
     <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Page Banner -->
-    <section class="page-banner" style="background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1920&q=85') center/cover;">
+    <section class="page-banner" style="background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=85') center/cover;">
         <div class="page-banner-content">
-            <h1>Vehicle Tracker</h1>
-            <p>Advanced GPS tracking for complete security</p>
+            <h1>Contact Us</h1>
+            <p>We're here to help — reach us anytime</p>
         </div>
     </section>
 
-    <!-- Tracker Section -->
+    <!-- Contact Section -->
     <section class="section">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
-                    <i class="fas fa-satellite-dish"></i>
-                    GPS Tracking
+                    <i class="fas fa-envelope"></i>
+                    Get in Touch
                 </div>
-                <h2>Track Your Vehicle</h2>
-                <p>Real-time location tracking with advanced features for complete peace of mind.</p>
+                <h2>Talk to Our Team</h2>
+                <p>Call the right department directly, or send us a message and we'll get back to you.</p>
             </div>
-            <div class="tracker-grid">
-                <div class="tracker-map">
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=85" alt="Map">
-                    <div class="tracker-map-overlay">
-                        <i class="fas fa-satellite-dish"></i>
-                        <h4>Real-Time Tracking</h4>
+            <div class="phone-strip">
+                <div class="phone-box">
+                    <div class="phone-box-icon"><i class="fas fa-headset"></i></div>
+                    <div class="phone-box-info">
+                        <span>Sales</span>
+                        <a href="tel:+923001234567">+92 300 1234567</a>
                     </div>
+                    <a href="tel:+923001234567" class="phone-box-call"><i class="fas fa-phone"></i> Call Now</a>
                 </div>
-                <div class="tracker-features">
-                    <div class="tracker-feature">
+                <div class="phone-box">
+                    <div class="phone-box-icon"><i class="fas fa-phone-volume"></i></div>
+                    <div class="phone-box-info">
+                        <span>Contact</span>
+                        <a href="tel:+92992123456">+92 992 123456</a>
+                    </div>
+                    <a href="tel:+92992123456" class="phone-box-call"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+92 300 1234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option>General Inquiry</option>
+                                <option>New Car Purchase</option>
+                                <option>Service Booking</option>
+                                <option>Parts Inquiry</option>
+                                <option>Insurance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-card">
                         <i class="fas fa-map-marker-alt"></i>
-                        <h4>Live Location</h4>
-                        <p>Track your vehicle in real-time with precise GPS coordinates.</p>
+                        <h4>Visit Us</h4>
+                        <p>Main GT Road, Abbottabad, KPK, Pakistan</p>
                     </div>
-                    <div class="tracker-feature">
-                        <i class="fas fa-history"></i>
-                        <h4>Route History</h4>
-                        <p>View complete travel history with timestamps and routes.</p>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Working Hours</h4>
+                        <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
                     </div>
-                    <div class="tracker-feature">
-                        <i class="fas fa-bell"></i>
-                        <h4>Geo-Fencing</h4>
-                        <p>Set boundaries and get alerts when vehicle enters or exits.</p>
-                    </div>
-                    <div class="tracker-feature">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Mobile App</h4>
-                        <p>Monitor your vehicle from anywhere using our mobile app.</p>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email Us</h4>
+                        <p>info@hondatownship.com</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section section-gray">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-tag"></i>
-                    Packages
-                </div>
-                <h2>Tracking Packages</h2>
-                <p>Choose the package that suits your needs.</p>
-            </div>
-            <div class="insurance-grid">
-                <div class="insurance-card">
-                    <div class="insurance-icon">
-                        <i class="fas fa-satellite"></i>
-                    </div>
-                    <h3>Basic</h3>
-                    <p>Essential tracking with location updates every 5 minutes.</p>
-                    <div class="insurance-price">PKR 3,500 <span>/month</span></div>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Plan</a>
-                </div>
-                <div class="insurance-card" style="border-color: var(--honda-red);">
-                    <div class="insurance-icon">
-                        <i class="fas fa-satellite-dish"></i>
-                    </div>
-                    <h3>Standard</h3>
-                    <p>Real-time tracking with route history and geo-fencing.</p>
-                    <div class="insurance-price">PKR 5,500 <span>/month</span></div>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Plan</a>
-                </div>
-                <div class="insurance-card">
-                    <div class="insurance-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Premium</h3>
-                    <p>Complete security with engine cut-off and anti-theft alerts.</p>
-                    <div class="insurance-price">PKR 8,500 <span>/month</span></div>
-                    <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Plan</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Secure Your Vehicle Today</h2>
-                <p>Don't wait until it's too late. Install a GPS tracker and drive with confidence.</p>
-                <a href="index.html#contact" class="btn btn-white">
-                    <i class="fas fa-phone"></i>
-                    Book Installation
-                </a>
             </div>
         </div>
     </section>
@@ -165,7 +150,13 @@
                     <a href="about.html" class="logo">
                         <img src="images/logo.png" alt="Honda Abbott" class="logo-img">
                     </a>
-                    <p>Your trusted 3S Authorized Honda Dealership in Abbottabad.</p>
+                    <p>Your trusted 3S Authorized Honda Dealership in Abbottabad. Sales, Service, and Spare Parts - all under one roof.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -189,9 +180,10 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Abbottabad, Pakistan</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--honda-red); margin-right: 8px;"></i> Main GT Road, Abbottabad</li>
                         <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> For Sale: +92 300 1234567</li>
                         <li><i class="fas fa-phone" style="color: var(--honda-red); margin-right: 8px;"></i> For Contact: +92 992 123456</li>
+                        <li><i class="fas fa-envelope" style="color: var(--honda-red); margin-right: 8px;"></i> info@hondatownship.com</li>
                     </ul>
                 </div>
             </div>
