@@ -194,4 +194,40 @@ document.addEventListener('DOMContentLoaded', function() {
             else headerEl.classList.remove('scrolled');
         });
     }
+
+    // Blur the other buttons/cards when one is clicked
+    function blurGroup(item, group, href) {
+        group.forEach(function(el) {
+            if (el !== item) el.classList.add('group-blur');
+        });
+        if (!href) return;
+        if (href.charAt(0) === '#') {
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(function() {
+                group.forEach(function(el) { el.classList.remove('group-blur'); });
+            }, 800);
+        } else {
+            setTimeout(function() { window.location.href = href; }, 320);
+        }
+    }
+
+    const quickBtns = document.querySelectorAll('.quick-bar .quick-btn');
+    quickBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const group = this.closest('.container').querySelectorAll('.quick-btn');
+            blurGroup(this, group, this.getAttribute('href'));
+        });
+    });
+
+    const trioCards = document.querySelectorAll('.service-trio .feature-card');
+    trioCards.forEach(function(card) {
+        const link = card.querySelector('a');
+        if (!link) return;
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            blurGroup(card, trioCards, link.getAttribute('href'));
+        });
+    });
 });
