@@ -185,4 +185,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Reveal quick bar when scrolled
+    const headerEl = document.getElementById('header');
+    if (headerEl) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) headerEl.classList.add('scrolled');
+            else headerEl.classList.remove('scrolled');
+        });
+    }
 });
