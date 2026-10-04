@@ -71,6 +71,7 @@ img {
 .top-bar a {
     color: rgba(255,255,255,0.7);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .top-bar a:hover {
@@ -1445,11 +1446,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .quick-bar {
-        max-height: 70px;
-        opacity: 1;
-    }
-
     .quick-bar .container {
         padding: 8px 20px;
         gap: 8px;
@@ -1477,7 +1473,12 @@ footer {
         right: 22px;
     }
     .top-bar {
-        display: none;
+        font-size: 0.72rem;
+        padding: 5px 0;
+    }
+
+    .top-bar .container {
+        gap: 12px;
     }
     
     .mobile-toggle {
@@ -1487,20 +1488,26 @@ footer {
     nav {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 85%;
         max-width: 360px;
         height: 100vh;
         background: var(--honda-dark);
         padding: 80px 32px 32px;
-        transition: right 0.3s ease;
         z-index: 1001;
         box-shadow: -4px 0 20px rgba(0,0,0,0.15);
         overflow-y: auto;
+        display: none;
     }
     
     nav.active {
-        right: 0;
+        display: block;
+        animation: navSlideIn 0.3s ease;
+    }
+
+    @keyframes navSlideIn {
+        from { transform: translateX(100%); }
+        to { transform: translateX(0); }
     }
     
     nav ul {
@@ -1576,6 +1583,10 @@ footer {
     
     .hero-slide-content .price {
         font-size: 1.2rem;
+    }
+    
+    .hero-slide-content .badge {
+        display: none;
     }
     
     .hero-arrow {
