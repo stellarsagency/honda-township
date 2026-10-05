@@ -304,6 +304,7 @@ nav ul > li:hover .dropdown {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    width: max-content;
     background: var(--honda-red);
     color: #fff;
     padding: 12px 30px;
@@ -1608,7 +1609,7 @@ footer {
     }
     
     .hero-slide {
-        height: 360px;
+        height: 420px;
     }
 
     .dealer-badge {
@@ -1637,6 +1638,9 @@ footer {
         width: 36px;
         height: 36px;
         font-size: 16px;
+        top: auto;
+        bottom: 40px;
+        transform: none;
     }
     
     .section {
@@ -1787,15 +1791,11 @@ footer {
     }
 
     .hero-slide {
-        height: 300px;
-    }
-
-    .hero-slide-content {
-        top: calc(50% + 18px);
+        height: 360px;
     }
 
     .hero-nav {
-        bottom: 12px;
+        bottom: 16px;
     }
 
     .hero-dot.active {
