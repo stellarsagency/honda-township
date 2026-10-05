@@ -1791,7 +1791,15 @@ footer {
     }
 
     .hero-slide-content {
-        top: calc(50% + 23px);
+        top: calc(50% + 18px);
+    }
+
+    .hero-nav {
+        bottom: 12px;
+    }
+
+    .hero-dot.active {
+        width: 24px;
     }
 
     .hero-slide-content h1 {
