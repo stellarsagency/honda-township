@@ -53,35 +53,54 @@ img {
 }
 
 /* Top Bar */
+/* Sticky wrapper: icon bar + header together */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .top-bar {
     background: var(--honda-black);
     color: white;
     font-size: 0.8rem;
-    padding: 6px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .top-bar .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.top-bar a {
-    color: rgba(255,255,255,0.7);
+.tb-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
     transition: var(--transition);
-    white-space: nowrap;
 }
 
-.top-bar a:hover {
-    color: var(--honda-red);
+.tb-icon:hover {
+    transform: translateY(-2px) scale(1.08);
+    color: #fff;
 }
 
-.top-bar a i {
-    color: var(--honda-red);
-    font-size: 0.75rem;
-}
+.tb-wa,
+.tb-wa:hover { color: #25D366; }
+
+.tb-sale,
+.tb-sale:hover { color: var(--honda-red); }
+
+.tb-service,
+.tb-service:hover { color: rgba(255,255,255,0.9); }
 
 /* Header */
 header {
@@ -89,9 +108,6 @@ header {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     box-shadow: none;
 }
 
@@ -1332,56 +1348,10 @@ footer {
     color: rgba(255,255,255,0.4);
 }
 
-/* Floating call buttons */
-.fab-call {
-    position: fixed;
-    bottom: 28px;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 26px;
-    z-index: 1050;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-    transition: var(--transition);
-}
-
-.fab-call-sale {
-    left: 28px;
-    background: var(--honda-red);
-}
-
-.fab-call-service {
-    right: 28px;
-    background: var(--honda-black);
-}
-
-.fab-call:hover {
-    transform: scale(1.1);
-    color: #fff;
-}
-
-.fab-call::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 2px solid rgba(228, 5, 33, 0.6);
-    animation: fabPulse 2s infinite;
-}
-
-@keyframes fabPulse {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.6); opacity: 0; }
-}
-
 /* Back to top */
 .back-to-top {
     position: fixed;
-    bottom: 100px;
+    bottom: 28px;
     right: 35px;
     width: 44px;
     height: 44px;
@@ -1498,18 +1468,14 @@ footer {
         color: rgba(255, 255, 255, 0.85);
     }
 
-    .fab-call {
-        width: 52px;
-        height: 52px;
-        font-size: 23px;
-        bottom: 20px;
+    .tb-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
 
-    .fab-call-sale { left: 16px; }
-    .fab-call-service { right: 16px; }
-
     .back-to-top {
-        bottom: 88px;
+        bottom: 20px;
         right: 22px;
     }
     .top-bar {
