@@ -76,31 +76,38 @@ img {
     flex-wrap: wrap;
 }
 
-.tb-icon {
+.tb-call {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.85);
+    gap: 8px;
+    color: rgba(255,255,255,0.92);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
     transition: var(--transition);
 }
 
-.tb-icon:hover {
-    transform: translateY(-2px) scale(1.08);
+.tb-call:hover {
     color: #fff;
 }
 
-.tb-wa,
-.tb-wa:hover { color: #25D366; }
+.tb-call-ic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--honda-red);
+    color: #fff;
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
 
-.tb-sale,
-.tb-sale:hover { color: var(--honda-red); }
-
-.tb-service,
-.tb-service:hover { color: rgba(255,255,255,0.9); }
+.tb-call:hover .tb-call-ic {
+    transform: scale(1.1);
+}
 
 /* Header */
 header {
@@ -1417,6 +1424,10 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .tb-lbl { display: none; }
+}
+
 @media (max-width: 768px) {
     .quick-bar {
         position: absolute;
@@ -1468,10 +1479,15 @@ footer {
         color: rgba(255, 255, 255, 0.85);
     }
 
-    .tb-icon {
-        width: 28px;
-        height: 28px;
-        font-size: 0.9rem;
+    .tb-call {
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+
+    .tb-call-ic {
+        width: 26px;
+        height: 26px;
+        font-size: 0.85rem;
     }
 
     .back-to-top {
