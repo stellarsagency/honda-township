@@ -1332,8 +1332,8 @@ footer {
     color: rgba(255,255,255,0.4);
 }
 
-/* Floating WhatsApp buttons */
-.fab-whatsapp {
+/* Floating call buttons */
+.fab-call {
     position: fixed;
     bottom: 28px;
     width: 58px;
@@ -1345,30 +1345,31 @@ footer {
     color: #fff;
     font-size: 26px;
     z-index: 1050;
-    background: #25D366;
     box-shadow: 0 8px 24px rgba(0,0,0,0.35);
     transition: var(--transition);
 }
 
-.fab-whatsapp-left {
+.fab-call-sale {
     left: 28px;
+    background: var(--honda-red);
 }
 
-.fab-whatsapp-right {
+.fab-call-service {
     right: 28px;
+    background: var(--honda-black);
 }
 
-.fab-whatsapp:hover {
+.fab-call:hover {
     transform: scale(1.1);
     color: #fff;
 }
 
-.fab-whatsapp::after {
+.fab-call::after {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 2px solid rgba(37, 211, 102, 0.6);
+    border: 2px solid rgba(228, 5, 33, 0.6);
     animation: fabPulse 2s infinite;
 }
 
@@ -1497,15 +1498,15 @@ footer {
         color: rgba(255, 255, 255, 0.85);
     }
 
-    .fab-whatsapp {
+    .fab-call {
         width: 52px;
         height: 52px;
         font-size: 23px;
         bottom: 20px;
     }
 
-    .fab-whatsapp-left { left: 16px; }
-    .fab-whatsapp-right { right: 16px; }
+    .fab-call-sale { left: 16px; }
+    .fab-call-service { right: 16px; }
 
     .back-to-top {
         bottom: 88px;
