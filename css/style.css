@@ -163,7 +163,7 @@ header {
     transition: max-height 0.35s ease, opacity 0.35s ease;
 }
 
-header.scrolled .quick-bar {
+.sticky-top.scrolled .quick-bar {
     max-height: 70px;
     opacity: 1;
 }
@@ -199,11 +199,9 @@ header.scrolled .quick-bar {
     font-size: 0.85rem;
 }
 
-.group-blur {
-    filter: blur(6px);
-    opacity: 0.35;
-    pointer-events: none;
-    transition: var(--transition);
+.quick-btn.active {
+    background: var(--honda-red);
+    box-shadow: 0 6px 16px rgba(228, 5, 33, 0.45);
 }
 
 /* Navigation */
@@ -1505,6 +1503,14 @@ footer {
         color: rgba(255, 255, 255, 0.85);
     }
 
+    .quick-btn.active {
+        background: var(--honda-red);
+        color: #fff;
+        border-radius: 999px;
+        padding: 5px 12px;
+        text-shadow: none;
+    }
+
     .tb-call {
         font-size: 0.75rem;
         gap: 6px;
@@ -1565,12 +1571,6 @@ footer {
     
     nav.active {
         display: block;
-        animation: navSlideIn 0.3s ease;
-    }
-
-    @keyframes navSlideIn {
-        from { transform: translateX(100%); }
-        to { transform: translateX(0); }
     }
     
     nav ul {
@@ -1621,7 +1621,7 @@ footer {
         right: 0;
         bottom: 0;
         background: rgba(0,0,0,0.5);
-        z-index: 1000;
+        z-index: 999;
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);

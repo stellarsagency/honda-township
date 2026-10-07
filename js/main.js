@@ -188,46 +188,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Reveal quick bar when scrolled
     const headerEl = document.getElementById('header');
-    if (headerEl) {
+    const stickyWrap = headerEl ? headerEl.closest('.sticky-top') : null;
+    if (stickyWrap) {
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 60) headerEl.classList.add('scrolled');
-            else headerEl.classList.remove('scrolled');
+            stickyWrap.classList.toggle('scrolled', window.scrollY > 60);
         });
     }
 
-    // Blur the other buttons/cards when one is clicked
-    function blurGroup(item, group, href) {
-        group.forEach(function(el) {
-            if (el !== item) el.classList.add('group-blur');
-        });
-        if (!href) return;
-        if (href.charAt(0) === '#') {
-            const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setTimeout(function() {
-                group.forEach(function(el) { el.classList.remove('group-blur'); });
-            }, 800);
-        } else {
-            setTimeout(function() { window.location.href = href; }, 320);
-        }
-    }
-
-    const quickBtns = document.querySelectorAll('.quick-bar .quick-btn');
-    quickBtns.forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const group = this.closest('.container').querySelectorAll('.quick-btn');
-            blurGroup(this, group, this.getAttribute('href'));
-        });
-    });
-
-    const trioCards = document.querySelectorAll('.service-trio .feature-card');
-    trioCards.forEach(function(card) {
-        const link = card.querySelector('a');
-        if (!link) return;
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            blurGroup(card, trioCards, link.getAttribute('href'));
-        });
+    // Mark the quick-btn of the current page as active (red)
+    var here = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+    if (!here) here = 'index.html';
+    document.querySelectorAll('.quick-bar .quick-btn').forEach(function(btn) {
+        var file = (btn.getAttribute('href') || '').split('#')[0];
+        if (file && file === here) btn.classList.add('active');
     });
 });
