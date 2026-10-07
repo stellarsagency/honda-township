@@ -320,7 +320,8 @@ nav ul > li:hover .dropdown {
 
 .dealer-badge {
     position: absolute;
-    top: 24px;
+    top: 100%;
+    margin-top: 24px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 6;
@@ -1443,12 +1444,6 @@ footer {
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
-    header.scrolled .quick-bar {
-        max-height: none;
-        opacity: 0;
-        visibility: hidden;
-    }
-
     .quick-bar .container {
         padding: 0;
         gap: 16px;
@@ -1596,7 +1591,7 @@ footer {
     }
 
     .dealer-badge {
-        top: 8px;
+        margin-top: 8px;
         padding: 6px 14px;
         font-size: 0.7rem;
     }
