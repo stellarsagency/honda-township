@@ -152,6 +152,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Prefill contact form from enquiry links (?car=&variant=&price= or ?offer=)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        try {
+            const q = new URLSearchParams(location.search);
+            const car = q.get('car');
+            const variant = q.get('variant');
+            const price = q.get('price');
+            const offer = q.get('offer');
+            const carField = document.getElementById('carInterest');
+            const msgField = contactForm.querySelector('textarea');
+            const subjSel = contactForm.querySelector('select');
+            if (car && carField) {
+                carField.value = (variant && car.indexOf(variant) < 0) ? car + ' (' + variant + ')' : car;
+            }
+            if (car && msgField && !msgField.value) {
+                let msg = 'I am interested in ' + (carField ? carField.value : car) + '.\n';
+                if (price) msg += 'Price: ' + price + '\n';
+                msg += '\nPlease share more details, availability and the booking process. Thank you.';
+                msgField.value = msg;
+            } else if (offer && msgField && !msgField.value) {
+                msgField.value = 'I am interested in "' + offer + '".\n\nPlease share more details. Thank you.';
+            }
+            if ((car || offer) && subjSel) subjSel.value = 'Sales Inquiry';
+        } catch (e) {}
+    }
+
     // Test drive form
     const testDriveForm = document.getElementById('testDriveForm');
     if (testDriveForm) {
