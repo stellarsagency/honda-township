@@ -73,8 +73,8 @@ img {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    flex-wrap: wrap;
-}
+    flex-wrap: nowrap;
+}}
 
 .tb-call {
     display: inline-flex;
@@ -1963,3 +1963,39 @@ footer {
         padding: 24px 20px;
     }
 }
+
+@media (max-width: 560px) {
+    .top-bar .container {
+        gap: 6px;
+    }
+
+    .tb-call {
+        font-size: clamp(0.55rem, 2.5vw, 0.75rem);
+        gap: 4px;
+    }
+
+    .tb-call-ic {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    .tb-call-sale {
+        padding: 3px 8px 3px 4px;
+    }
+
+    .tb-call-sale .tb-call-ic {
+        width: 18px;
+        height: 18px;
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .tb-call-ic {
+        display: none;
+    }
+
+    .tb-call-sale {
+        padding: 3px 8px;
+    }
