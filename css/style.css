@@ -132,6 +132,12 @@ img {
     height: 28px;
 }
 
+.tb-call-sale .tb-lbl {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
 @keyframes saleGlow {
     0%, 100% {
         box-shadow: 0 4px 14px rgba(228, 5, 33, 0.45);
@@ -1505,10 +1511,6 @@ footer {
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media (max-width: 480px) {
-    .tb-lbl { display: none; }
 }
 
 @media (max-width: 768px) {
