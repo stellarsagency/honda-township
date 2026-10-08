@@ -72,9 +72,9 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 22px;
     flex-wrap: nowrap;
-}}
+}
 
 .tb-call {
     display: inline-flex;
@@ -111,40 +111,18 @@ img {
 
 /* Sale highlight — top bar + WhatsApp */
 .tb-call-sale {
-    background: var(--gradient-red);
     color: #fff;
-    padding: 4px 14px 4px 6px;
-    border-radius: 3px;
     font-weight: 600;
-    box-shadow: 0 4px 14px rgba(228, 5, 33, 0.45);
-    animation: saleGlow 2.4s infinite;
 }
 
 .tb-call-sale:hover {
     color: #fff;
-    transform: translateY(-1px);
-}
-
-.tb-call-sale .tb-call-ic {
-    background: #fff;
-    color: var(--honda-red);
-    width: 28px;
-    height: 28px;
 }
 
 .tb-call-sale .tb-lbl {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.3px;
-}
-
-@keyframes saleGlow {
-    0%, 100% {
-        box-shadow: 0 4px 14px rgba(228, 5, 33, 0.45);
-    }
-    50% {
-        box-shadow: 0 4px 22px rgba(228, 5, 33, 0.8);
-    }
 }
 
 .wa-fab .wa-tag {
@@ -182,7 +160,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 14px 28px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -268,7 +246,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 4px;
+    gap: 8px;
 }
 
 nav ul > li {
@@ -1578,16 +1556,6 @@ footer {
         font-size: 0.85rem;
     }
 
-    .tb-call-sale {
-        padding: 3px 10px 3px 4px;
-    }
-
-    .tb-call-sale .tb-call-ic {
-        width: 24px;
-        height: 24px;
-        font-size: 0.8rem;
-    }
-
     .wa-fab .wa-tag {
         font-size: 9px;
         padding: 2px 6px;
@@ -1966,7 +1934,7 @@ footer {
 
 @media (max-width: 560px) {
     .top-bar .container {
-        gap: 6px;
+        gap: 10px;
     }
 
     .tb-call {
@@ -1979,23 +1947,10 @@ footer {
         height: 20px;
         font-size: 0.7rem;
     }
-
-    .tb-call-sale {
-        padding: 3px 8px 3px 4px;
-    }
-
-    .tb-call-sale .tb-call-ic {
-        width: 18px;
-        height: 18px;
-        font-size: 0.65rem;
-    }
 }
 
 @media (max-width: 360px) {
     .tb-call-ic {
         display: none;
     }
-
-    .tb-call-sale {
-        padding: 3px 8px;
-    }
+}
